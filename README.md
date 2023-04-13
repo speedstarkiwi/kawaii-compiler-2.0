@@ -8,7 +8,11 @@ There is a specific function called `Luau::compile` which compiles lua scripts (
 
 # whats the difference?
 
-This is *wayyyyyyy* better then 1.0 and also it was the first DLL I released without **skidding** after years.
+This is *way* better then 1.0 and also it was the first DLL I released without **skidding** after years.
+
+# how to use?
+
+[coming soon]
 
 # credits
 
