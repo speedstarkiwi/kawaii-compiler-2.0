@@ -19,4 +19,3 @@ ROBLOX_INT ROBLOX_C2 DllMain(ROBLOX_DWORD m, ROBLOX_DWORD r, ROBLOX_INT l) { // 
   } // end the switch
  r_R(ROBLOX_ONE); // return it
 } // end the dll main function
-
