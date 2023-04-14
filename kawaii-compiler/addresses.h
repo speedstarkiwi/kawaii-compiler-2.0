@@ -16,7 +16,7 @@
 #define ROBLOX_C12	__asm // define the asm calling convention
 #define ROBLOX_C13	__cdecl // define the cdecl calling convention
 #define ROBLOX_C14	__assume // define the assume calling convention
-#define r_dots ...
+#define r_dots ... // define the things
 #define r_W	while // define the while
 #define r_F	for // define the for
 #define r_I	if // define the if
@@ -42,7 +42,7 @@
 #define NULL	0x00000000 // define the number
 #define NOTHIN	VOID // define the nothing
 #define rein	reinterpret_cast // define the caster
-#define angle(a1,a2)	a1<a2> // define the syntaciller
+#define angle(a1,a2)	a1<a2> // define this syntax (DONT CHANGE)
 #define s(n,v)	n=v; // create a setter
 #define s2(t,n,v)	t n=v // create a better setter
 #define s22(t,n,v)	t n=v; // create a other better setter
@@ -54,7 +54,7 @@ r_TD r_U addresses { // start the addys
 #define ROBLOX_ZERO	0 // define number zero for use
 #define ROBLOX_ONE	ROBLOX_ZERO+1 // define number one for use
 #define ROBLOX_H(N)	0x##N // create the hexer
-#define ROBLOX_D(N)	N // create a decimel
+#define ROBLOX_D(N)	N // create a decimel (MUST BE N)
 #define ROBLOX_STR	std::string // define the string
 #define ROBLOX_FUNC_CREATE(a1,a2,a3,...)	a(a1,a2(a3*)(__VA_ARGS__)) // define the function creater
 #define ROBLOX_FUNC_CREATE2(a1,a2,a3)	a(a1,a2(a3*)()) // define the function creator
@@ -89,3 +89,5 @@ r_S offsets { // start the offset
 };}; // end the offset and the lua possibilitys
 #define ROBLOX_GO(g,o)	(a2(ROBLOX_DWORD(g)+ROBLOX_D(o),ROBLOX_DWORD)) // define the go thing for offset
 #define ROBLOX_GOT(g,o,t)	(a2(ROBLOX_DWORD(g)+ROBLOX_D(o),t)) // define the got thing for offset
+#define ROBLOX_START_MAIN std::thread(main).detach(); // define the main start method
+#define r_STR_STRING c_str() // define to converts a str to a string
