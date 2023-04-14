@@ -1,22 +1,21 @@
 #pragma once
 #include <Windows.h>
 #define ROBLOX_HN GetModuleHandleA
-#define ROBLOX_C__	__
-#define ROBLOX_C1	ROBLOX_C__##cdecl
-#define ROBLOX_C2	ROBLOX_C__##stdcall
-#define ROBLOX_C3	ROBLOX_C__##thiscall
-#define ROBLOX_C4	ROBLOX_C__##fastcall
-#define ROBLOX_C5	ROBLOX_C__##declspec
-#define ROBLOX_C6	ROBLOX_C__##vectorcall
-#define ROBLOX_C7	ROBLOX_C__##forceinline
-#define ROBLOX_C8	ROBLOX_C__##declspec
-#define ROBLOX_C9	ROBLOX_C__##forceinline
-#define ROBLOX_C10	ROBLOX_C__##virtual_inheritance
-#define ROBLOX_C11	ROBLOX_C__##forceinline
-#define ROBLOX_C12	ROBLOX_C__##asm
-#define ROBLOX_C13	ROBLOX_C__##cdecl
-#define ROBLOX_C14	ROBLOX_C__##assume
-#define ROBLOX_ZERO	0
+#define ROBLOX_C1	__cdecl
+#define ROBLOX_C2	__stdcall
+#define ROBLOX_C3	__thiscall
+#define ROBLOX_C4	__fastcall
+#define ROBLOX_C5	__declspec
+#define ROBLOX_C6	__vectorcall
+#define ROBLOX_C7	__forceinline
+#define ROBLOX_C8	__declspec
+#define ROBLOX_C9	__forceinline
+#define ROBLOX_C10	__virtual_inheritance
+#define ROBLOX_C11	__forceinline
+#define ROBLOX_C12	__asm
+#define ROBLOX_C13	__cdecl
+#define ROBLOX_C14	__assume
+#undef NULL
 #define NULL	0x00000000
 #define NOTHIN	VOID
 #define rein	reinterpret_cast
@@ -25,8 +24,9 @@
 typedef union addresses {
 #define ROBLOX_INT	int
 #define ROBLOX_DWORD	DWORD
-#define ROBLOX_H(N)	ROBLOX_ZERO##x##N
-#define ROBLOX_D(N)	ROBLOX_ZERO##N
+#define ROBLOX_ZERO	0
+#define ROBLOX_H(N)	0x##N
+#define ROBLOX_D(N)	N
 #define ROBLOX_STR	std::string
 #define ROBLOX_FUNC_CREATE(a1,a2,a3,...)	a(a1,a2(a3*)(__VA_ARGS__))
 #define ROBLOX_FUNC_CREATE2(a1,a2,a3)	a(a1,a2(a3*)())
