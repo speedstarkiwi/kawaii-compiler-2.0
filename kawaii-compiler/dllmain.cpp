@@ -7,16 +7,13 @@
 int main() {
 	r_print(0, (int)"Penis!");
 }
-BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)
-{
-    switch (ul_reason_for_call)
-	 {
-    case DLL_PROCESS_ATTACH:
-        std::thread(main).detach();
-		break;
-    case DLL_PROCESS_DETACH:
-        break;
-    }
-    return TRUE;
+BOOL ROBLOX_C2 DllMain(ROBLOX_DWORD m, ROBLOX_DWORD r, ROBLOX_INT l) {
+ switch (r)
+ {
+  case 1:
+   std::thread(main).detach();
+   break;
+  }
+ return TRUE;
 }
 
