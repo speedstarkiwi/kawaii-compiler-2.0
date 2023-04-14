@@ -4,7 +4,7 @@ This is the **2.0** edition of **Kawaii** compiler. Explanation can be accessed 
 
 # how does it work?
 
-There is a specific function called `Luau::compile` which compiles lua scripts (code) into executable **bytecode**. After that, it uses `luau_load` to load and compile up the lua scripts.
+There is a specific function called `Luau::compile` which compiles lua scripts (code) into executable **bytecode**. After that, it uses `luau_load` to load the bytecode into a function, then uses `task.defer` (warning: logs calls) to run the function.
 
 # whats the difference?
 
