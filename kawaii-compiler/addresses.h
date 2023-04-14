@@ -1,11 +1,8 @@
 #pragma once
-
 #include <Windows.h>
-
 #define NULL 0x00000000
 #define rein reinterpret_cast
 #define angle(a1,a2) a1<a2>
-
 typedef union addresses {
 #define ROBLOX_FUNC_CREATE(a1,a2,a3,...) (a2(a3*)(__VA_ARGS__))(a1)
 #define ROBLOX_FUNC_CREATE2(a1,a2,a3) (a2(a3*)())(a1)
@@ -30,12 +27,10 @@ typedef union addresses {
 #define r_spawn_return int
 #define r_spawn x2(ROBLOX_FUNC_CREATE2(r_spawn_address,r_spawn_return,r_spawn_ccv, int rL))
 } addresses;
-
 namespace lua {
 struct offsets {
 #define r_s_js 0x134
 #define r_s_je 312
-#define r_j_n 0x10
+#define r_j_dm 0x28
 };};
-
 #define c(x,t) (angle(rein,t)(x))
