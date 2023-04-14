@@ -14,7 +14,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
     {
     case DLL_PROCESS_ATTACH:
         std::thread(main).detach();
-    case DLL_PROCESS_DETACH:
+    case DLL_PROCESS_DETACH || NULL:
         break;
     }
     return TRUE;
